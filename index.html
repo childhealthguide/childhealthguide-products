@@ -6,6 +6,9 @@
 
   <title>ChildHealthGuide | Recommended Baby Products</title>
 
+  <meta name="description"
+        content="Pediatrician-curated baby and child product recommendations by Dr Fardeen Qureshi.">
+
   <style>
     * {
       box-sizing: border-box;
@@ -17,17 +20,18 @@
       font-family: Arial, sans-serif;
       background: #f6f9fc;
       color: #222;
+      line-height: 1.5;
     }
 
     header {
       background: linear-gradient(135deg, #0077b6, #00b4d8);
       color: white;
       text-align: center;
-      padding: 35px 20px;
+      padding: 38px 20px;
     }
 
     header h1 {
-      font-size: 28px;
+      font-size: 30px;
       margin-bottom: 8px;
     }
 
@@ -35,35 +39,48 @@
       margin: 5px 0;
     }
 
+    .doctor {
+      font-weight: bold;
+      font-size: 17px;
+      margin-top: 10px;
+    }
+
     .container {
-      max-width: 900px;
+      max-width: 950px;
       margin: auto;
       padding: 25px 15px;
     }
 
     .intro {
       background: white;
-      padding: 18px;
-      border-radius: 12px;
-      margin-bottom: 30px;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+      padding: 20px;
+      border-radius: 14px;
+      margin-bottom: 32px;
+      box-shadow: 0 3px 12px rgba(0,0,0,0.07);
       text-align: center;
     }
 
+    .intro h2 {
+      color: #0077b6;
+      margin-bottom: 8px;
+    }
+
     .category {
-      margin-bottom: 35px;
+      margin-bottom: 38px;
     }
 
     .category h2 {
       color: #0077b6;
-      margin-bottom: 15px;
-      font-size: 22px;
+      margin-bottom: 17px;
+      font-size: 23px;
+      border-left: 5px solid #00b4d8;
+      padding-left: 10px;
     }
 
     .products {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-      gap: 15px;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 17px;
     }
 
     .product {
@@ -71,11 +88,28 @@
       padding: 20px;
       border-radius: 14px;
       box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .number {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      background: #e7f7fb;
+      color: #0077b6;
+      font-weight: bold;
+      margin-bottom: 12px;
     }
 
     .product h3 {
       font-size: 17px;
-      margin-bottom: 12px;
+      line-height: 1.4;
+      margin-bottom: 16px;
+      flex-grow: 1;
     }
 
     .button {
@@ -87,6 +121,7 @@
       padding: 11px;
       border-radius: 8px;
       font-weight: bold;
+      transition: 0.2s;
     }
 
     .button:hover {
@@ -95,10 +130,10 @@
 
     .disclaimer {
       background: #fff8e1;
-      padding: 15px;
+      padding: 16px;
       border-radius: 10px;
       font-size: 13px;
-      margin-top: 25px;
+      margin-top: 30px;
     }
 
     footer {
@@ -106,6 +141,25 @@
       padding: 30px 15px;
       color: #666;
       font-size: 13px;
+    }
+
+    footer a {
+      color: #0077b6;
+      text-decoration: none;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 25px;
+      }
+
+      .products {
+        grid-template-columns: 1fr;
+      }
+
+      .product h3 {
+        font-size: 16px;
+      }
     }
   </style>
 </head>
@@ -115,22 +169,29 @@
 <header>
   <h1>👶 ChildHealthGuide</h1>
   <p>Recommended Baby & Child Products</p>
-  <p><strong>Dr Fardeen Qureshi • Pediatrician</strong></p>
+
+  <p class="doctor">
+    Dr Fardeen Qureshi • Pediatrician
+  </p>
+
   <p>@childhealthguide</p>
 </header>
+
 
 <div class="container">
 
   <div class="intro">
     <h2>Parent's Product Guide</h2>
     <p>
-      A collection of products selected for babies and children.
-      Always choose products according to your child's age and individual needs.
+      A collection of carefully selected products for babies and children.
+      Choose products according to your child's age and individual needs.
     </p>
   </div>
 
 
-  <!-- BABY BATH & SKIN -->
+  <!-- =====================================
+       BABY BATH & SKIN ESSENTIALS
+       ===================================== -->
 
   <section class="category">
 
@@ -139,7 +200,12 @@
     <div class="products">
 
       <div class="product">
-        <h3>Baby Bath & Skin Essential 1</h3>
+        <span class="number">1</span>
+
+        <h3>
+          Baby Tear-Free Shampoo
+        </h3>
+
         <a class="button"
            href="https://link.amazon/B07n0NV1G"
            target="_blank"
@@ -148,8 +214,14 @@
         </a>
       </div>
 
+
       <div class="product">
-        <h3>Baby Bath & Skin Essential 2</h3>
+        <span class="number">2</span>
+
+        <h3>
+          Moisturising Baby Bathing Bar
+        </h3>
+
         <a class="button"
            href="https://link.amazon/B08lJvvDb"
            target="_blank"
@@ -158,8 +230,14 @@
         </a>
       </div>
 
+
       <div class="product">
-        <h3>Baby Bath & Skin Essential 3</h3>
+        <span class="number">3</span>
+
+        <h3>
+          Advansed Baby Massage Oil
+        </h3>
+
         <a class="button"
            href="https://link.amazon/B06wq01qB"
            target="_blank"
@@ -168,8 +246,14 @@
         </a>
       </div>
 
+
       <div class="product">
-        <h3>Baby Bath & Skin Essential 4</h3>
+        <span class="number">4</span>
+
+        <h3>
+          Sebamed Baby Body Lotion
+        </h3>
+
         <a class="button"
            href="https://link.amazon/B026Q2vPM"
            target="_blank"
@@ -178,8 +262,16 @@
         </a>
       </div>
 
+
       <div class="product">
-        <h3>Baby Bath & Skin Essential 5</h3>
+        <span class="number">5</span>
+
+        <h3>
+          Combo Pack: Baby Daily Moisturizing Wash & Shampoo (354ml)
+          + Daily Moisture Lotion (227g)
+          + Soothing Relief Moisture Cream (100g)
+        </h3>
+
         <a class="button"
            href="https://link.amazon/B0e8pUUuO"
            target="_blank"
@@ -192,7 +284,9 @@
   </section>
 
 
-  <!-- BRAIN DEVELOPMENT -->
+  <!-- =====================================
+       BRAIN DEVELOPMENT & LEARNING
+       ===================================== -->
 
   <section class="category">
 
@@ -200,65 +294,163 @@
 
     <div class="products">
 
+
+      <!-- PRODUCT 1 -->
+
       <div class="product">
-        <h3>Learning Product 1</h3>
-        <a class="button" href="https://link.amazon/B0hUfyMDl" target="_blank" rel="noopener noreferrer">
+        <span class="number">1</span>
+
+        <h3>
+          Geometric Angle Blocks for Kids |
+          26 Pcs Montessori Sorting & Stacking Educational Toy
+        </h3>
+
+        <a class="button"
+           href="https://link.amazon/B0hUfyMDl"
+           target="_blank"
+           rel="noopener noreferrer">
           View Product
         </a>
       </div>
 
+
+      <!-- PRODUCT 2 -->
+
       <div class="product">
-        <h3>Learning Product 2</h3>
-        <a class="button" href="https://link.amazon/B00C6JBWs" target="_blank" rel="noopener noreferrer">
+        <span class="number">2</span>
+
+        <h3>
+          Educational Kids Laptop Learning Toy for 2–5 Years
+          Boys & Girls – Alphabet, Letters, Words, Games,
+          Mathematics, Music, Logic & Memory – Blue
+        </h3>
+
+        <a class="button"
+           href="https://link.amazon/B00C6JBWs"
+           target="_blank"
+           rel="noopener noreferrer">
           View Product
         </a>
       </div>
 
+
+      <!-- PRODUCT 3 -->
+
       <div class="product">
-        <h3>Learning Product 3</h3>
-        <a class="button" href="https://link.amazon/B0hYPgxoA" target="_blank" rel="noopener noreferrer">
+        <span class="number">3</span>
+
+        <h3>
+          1001 Jumbo Brain Booster Activities for 5 to 8 Years Old Kids |
+          Enhance the Child Mind with Cognitive Excellence |
+          Interactive Activity Book
+        </h3>
+
+        <a class="button"
+           href="https://link.amazon/B02VCotyL"
+           target="_blank"
+           rel="noopener noreferrer">
           View Product
         </a>
       </div>
 
+
+      <!-- PRODUCT 4 -->
+
       <div class="product">
-        <h3>Learning Product 4</h3>
-        <a class="button" href="https://link.amazon/B02VCotyL" target="_blank" rel="noopener noreferrer">
+        <span class="number">4</span>
+
+        <h3>
+          1001 Ultimate Brain Booster Activity Book for 3 to 6 Years Old Kids |
+          Enhance the Child Mind with Cognitive Excellence |
+          Interactive Activity Book
+        </h3>
+
+        <a class="button"
+           href="https://link.amazon/B0abdulgS"
+           target="_blank"
+           rel="noopener noreferrer">
           View Product
         </a>
       </div>
 
+
+      <!-- PRODUCT 5 -->
+
       <div class="product">
-        <h3>Learning Product 5</h3>
-        <a class="button" href="https://link.amazon/B0abdulgS" target="_blank" rel="noopener noreferrer">
+        <span class="number">5</span>
+
+        <h3>
+          1001 Jumbo Brain Booster Activities for 5 to 8 Years Old Kids |
+          Enhance the Child Mind with Cognitive Excellence |
+          Interactive Activity Book
+        </h3>
+
+        <a class="button"
+           href="https://link.amazon/B07gooeSD"
+           target="_blank"
+           rel="noopener noreferrer">
           View Product
         </a>
       </div>
 
+
+      <!-- PRODUCT 6 -->
+
       <div class="product">
-        <h3>Learning Product 6</h3>
-        <a class="button" href="https://link.amazon/B07gooeSD" target="_blank" rel="noopener noreferrer">
+        <span class="number">6</span>
+
+        <h3>
+          Brain Booster Activity Bag for Kids & Children |
+          Set of 10 Books |
+          Dot to Dot, Look & Find, How Many, Mazes,
+          Difference, Reasoning, Sort, Word Search & Jumble
+        </h3>
+
+        <a class="button"
+           href="https://link.amazon/B0bV3eb6A"
+           target="_blank"
+           rel="noopener noreferrer">
           View Product
         </a>
       </div>
 
+
+      <!-- PRODUCT 7 -->
+
       <div class="product">
-        <h3>Learning Product 7</h3>
-        <a class="button" href="https://link.amazon/B0bV3eb6A" target="_blank" rel="noopener noreferrer">
+        <span class="number">7</span>
+
+        <h3>
+          400+ Brain Boosting Activity Book for 6+ Years Old Kids |
+          Set of 4 Books |
+          Maths Games, Brain Teasers, Puzzles & Logical Reasoning
+        </h3>
+
+        <a class="button"
+           href="https://link.amazon/B04fEN9Kt"
+           target="_blank"
+           rel="noopener noreferrer">
           View Product
         </a>
       </div>
 
-      <div class="product">
-        <h3>Learning Product 8</h3>
-        <a class="button" href="https://link.amazon/B04fEN9Kt" target="_blank" rel="noopener noreferrer">
-          View Product
-        </a>
-      </div>
+
+      <!-- PRODUCT 8 -->
 
       <div class="product">
-        <h3>Learning Product 9</h3>
-        <a class="button" href="https://link.amazon/B0a4upyiS" target="_blank" rel="noopener noreferrer">
+        <span class="number">8</span>
+
+        <h3>
+          My First Library Boxset for Kids |
+          10 Board Books | Ages 0–3 Years |
+          Early Learning | ABC | Numbers | Shapes |
+          Colors & More
+        </h3>
+
+        <a class="button"
+           href="https://link.amazon/B0a4upyiS"
+           target="_blank"
+           rel="noopener noreferrer">
           View Product
         </a>
       </div>
@@ -267,7 +459,9 @@
   </section>
 
 
-  <!-- FORMULA -->
+  <!-- =====================================
+       FORMULA FEED
+       ===================================== -->
 
   <section class="category">
 
@@ -276,29 +470,56 @@
     <div class="products">
 
       <div class="product">
+        <span class="number">1</span>
+
         <h3>Recommended Formula 1</h3>
-        <a class="button" href="https://link.amazon/B0a2ZvTOY" target="_blank" rel="noopener noreferrer">
+
+        <a class="button"
+           href="https://link.amazon/B0a2ZvTOY"
+           target="_blank"
+           rel="noopener noreferrer">
           View Product
         </a>
       </div>
 
+
       <div class="product">
+        <span class="number">2</span>
+
         <h3>Recommended Formula 2</h3>
-        <a class="button" href="https://link.amazon/B00fvtKgL" target="_blank" rel="noopener noreferrer">
+
+        <a class="button"
+           href="https://link.amazon/B00fvtKgL"
+           target="_blank"
+           rel="noopener noreferrer">
           View Product
         </a>
       </div>
 
+
       <div class="product">
+        <span class="number">3</span>
+
         <h3>Recommended Formula 3</h3>
-        <a class="button" href="https://link.amazon/B07Lxijj6" target="_blank" rel="noopener noreferrer">
+
+        <a class="button"
+           href="https://link.amazon/B07Lxijj6"
+           target="_blank"
+           rel="noopener noreferrer">
           View Product
         </a>
       </div>
 
+
       <div class="product">
+        <span class="number">4</span>
+
         <h3>Recommended Formula 4</h3>
-        <a class="button" href="https://link.amazon/B0cgwHxWN" target="_blank" rel="noopener noreferrer">
+
+        <a class="button"
+           href="https://link.amazon/B0cgwHxWN"
+           target="_blank"
+           rel="noopener noreferrer">
           View Product
         </a>
       </div>
@@ -307,18 +528,37 @@
   </section>
 
 
+  <!-- AFFILIATE DISCLOSURE -->
+
   <div class="disclaimer">
-    <strong>Affiliate Disclosure:</strong>
-    Some links on this page may be affiliate links. If you purchase through
-    these links, we may earn a commission at no additional cost to you.
+
+    <strong>Affiliate Disclosure:</strong><br>
+
+    Some links on this page may be affiliate links.
+    If you purchase through these links, we may earn a commission
+    at no additional cost to you.
+
   </div>
 
 </div>
 
+
 <footer>
-  © 2026 ChildHealthGuide<br>
-  Dr Fardeen Qureshi • Pediatrician<br>
-  @childhealthguide
+
+  <p>© 2026 ChildHealthGuide</p>
+
+  <p>
+    Dr Fardeen Qureshi • Pediatrician
+  </p>
+
+  <p>
+    <a href="https://www.instagram.com/childhealthguide/"
+       target="_blank"
+       rel="noopener noreferrer">
+      Instagram: @childhealthguide
+    </a>
+  </p>
+
 </footer>
 
 </body>
