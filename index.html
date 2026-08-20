@@ -1,15 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>ChildHealthGuide | Recommended Baby Products</title>
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+  <title>
+    ChildHealthGuide | Pediatrician-Curated Product Guide
+  </title>
 
   <meta name="description"
-        content="Pediatrician-curated baby and child product recommendations by Dr Fardeen Qureshi.">
+        content="Pediatrician-curated baby and child product guide by Dr Fardeen Qureshi.">
 
   <style>
+
     * {
       box-sizing: border-box;
       margin: 0;
@@ -17,280 +24,470 @@
     }
 
     body {
-      font-family: Arial, sans-serif;
-      background: #f6f9fc;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f5f9fc;
       color: #222;
       line-height: 1.5;
     }
 
+
+    /* =========================
+       HEADER
+    ========================= */
+
     header {
-      background: linear-gradient(135deg, #0077b6, #00b4d8);
+      background: linear-gradient(
+        135deg,
+        #0077b6,
+        #00b4d8
+      );
+
       color: white;
+
       text-align: center;
-      padding: 38px 20px;
+
+      padding: 45px 20px;
     }
 
     header h1 {
-      font-size: 30px;
+      font-size: 32px;
       margin-bottom: 8px;
     }
 
-    header p {
-      margin: 5px 0;
+    header .tagline {
+      font-size: 17px;
     }
 
-    .doctor {
+    header .doctor {
+      font-size: 18px;
       font-weight: bold;
-      font-size: 17px;
-      margin-top: 10px;
+      margin-top: 14px;
     }
+
+    header .handle {
+      font-size: 14px;
+      margin-top: 5px;
+      opacity: 0.95;
+    }
+
+
+    /* =========================
+       CONTAINER
+    ========================= */
 
     .container {
-      max-width: 950px;
+      max-width: 1050px;
+
       margin: auto;
+
       padding: 25px 15px;
     }
 
+
+    /* =========================
+       INTRO
+    ========================= */
+
     .intro {
+
       background: white;
-      padding: 20px;
-      border-radius: 14px;
-      margin-bottom: 32px;
-      box-shadow: 0 3px 12px rgba(0,0,0,0.07);
+
+      padding: 25px;
+
+      border-radius: 16px;
+
+      margin-bottom: 35px;
+
       text-align: center;
+
+      box-shadow:
+        0 4px 15px rgba(0,0,0,0.07);
     }
 
     .intro h2 {
+
       color: #0077b6;
-      margin-bottom: 8px;
+
+      margin-bottom: 10px;
+
+      font-size: 24px;
     }
 
-    .category {
-      margin-bottom: 38px;
+    .intro p {
+
+      color: #555;
+
+      max-width: 750px;
+
+      margin: auto;
     }
 
-    .category h2 {
-      color: #0077b6;
-      margin-bottom: 17px;
-      font-size: 23px;
-      border-left: 5px solid #00b4d8;
-      padding-left: 10px;
+
+    /* =========================
+       MAIN CATEGORY
+    ========================= */
+
+    .main-category {
+
+      margin-bottom: 50px;
     }
+
+    .main-category-title {
+
+      color: #0077b6;
+
+      font-size: 26px;
+
+      margin-bottom: 25px;
+
+      border-left: 6px solid #00b4d8;
+
+      padding-left: 12px;
+    }
+
+
+    /* =========================
+       SUB CATEGORY
+    ========================= */
+
+    .subcategory {
+
+      margin-bottom: 32px;
+    }
+
+    .subcategory-title {
+
+      font-size: 20px;
+
+      color: #333;
+
+      margin-bottom: 16px;
+    }
+
+
+    /* =========================
+       PRODUCT GRID
+    ========================= */
 
     .products {
+
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 17px;
+
+      grid-template-columns:
+        repeat(
+          auto-fit,
+          minmax(260px, 1fr)
+        );
+
+      gap: 18px;
     }
+
+
+    /* =========================
+       PRODUCT CARD
+    ========================= */
 
     .product {
+
       background: white;
+
       padding: 20px;
-      border-radius: 14px;
-      box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+
+      border-radius: 15px;
+
+      box-shadow:
+        0 3px 12px rgba(0,0,0,0.08);
+
       display: flex;
+
       flex-direction: column;
+
+      transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
     }
+
+    .product:hover {
+
+      transform: translateY(-3px);
+
+      box-shadow:
+        0 8px 22px rgba(0,0,0,0.12);
+    }
+
+
+    /* =========================
+       PRODUCT NUMBER
+    ========================= */
 
     .number {
-      display: inline-flex;
+
+      width: 35px;
+
+      height: 35px;
+
+      display: flex;
+
       align-items: center;
+
       justify-content: center;
-      width: 34px;
-      height: 34px;
+
       border-radius: 50%;
-      background: #e7f7fb;
+
+      background: #e6f7fb;
+
       color: #0077b6;
+
       font-weight: bold;
-      margin-bottom: 12px;
+
+      margin-bottom: 13px;
     }
 
+
+    /* =========================
+       PRODUCT TITLE
+    ========================= */
+
     .product h3 {
+
       font-size: 17px;
-      line-height: 1.4;
-      margin-bottom: 16px;
+
+      line-height: 1.45;
+
+      margin-bottom: 18px;
+
       flex-grow: 1;
     }
 
+
+    /* =========================
+       AMAZON BUTTON
+    ========================= */
+
     .button {
+
       display: block;
+
       background: #ff9900;
+
       color: white;
+
       text-decoration: none;
+
       text-align: center;
+
       padding: 11px;
+
       border-radius: 8px;
+
       font-weight: bold;
-      transition: 0.2s;
+
+      transition:
+        background 0.2s ease;
     }
 
     .button:hover {
+
       background: #e68900;
     }
 
-    .disclaimer {
-      background: #fff8e1;
-      padding: 16px;
+
+    /* =========================
+       FORMULA NOTE
+    ========================= */
+
+    .formula-note {
+
+      background: #eef9fc;
+
+      border-left:
+        4px solid #00a6c7;
+
+      padding: 17px 18px;
+
       border-radius: 10px;
-      font-size: 13px;
-      margin-top: 30px;
+
+      margin-bottom: 22px;
+
+      color: #444;
+
+      font-size: 14px;
+
+      line-height: 1.6;
     }
 
-    footer {
-      text-align: center;
-      padding: 30px 15px;
-      color: #666;
+
+    /* =========================
+       AFFILIATE DISCLOSURE
+    ========================= */
+
+    .disclaimer {
+
+      background: #fff8e1;
+
+      border-left:
+        4px solid #f4b400;
+
+      padding: 17px;
+
+      border-radius: 10px;
+
       font-size: 13px;
+
+      margin-top: 20px;
+    }
+
+
+    /* =========================
+       FOOTER
+    ========================= */
+
+    footer {
+
+      text-align: center;
+
+      padding: 35px 15px;
+
+      color: #666;
+
+      font-size: 13px;
+    }
+
+    footer p {
+
+      margin: 5px 0;
     }
 
     footer a {
+
       color: #0077b6;
+
       text-decoration: none;
+
+      font-weight: bold;
     }
 
+
+    /* =========================
+       MOBILE
+    ========================= */
+
     @media (max-width: 600px) {
+
+      header {
+
+        padding: 35px 15px;
+      }
+
       header h1 {
-        font-size: 25px;
+
+        font-size: 26px;
+      }
+
+      header .tagline {
+
+        font-size: 15px;
+      }
+
+      header .doctor {
+
+        font-size: 16px;
+      }
+
+      .main-category-title {
+
+        font-size: 22px;
       }
 
       .products {
+
         grid-template-columns: 1fr;
       }
 
       .product h3 {
+
         font-size: 16px;
       }
+
     }
+
   </style>
+
 </head>
+
 
 <body>
 
+
+<!-- ==================================================
+     HEADER
+================================================== -->
+
 <header>
-  <h1>👶 ChildHealthGuide</h1>
-  <p>Recommended Baby & Child Products</p>
+
+  <h1>
+    👶 ChildHealthGuide
+  </h1>
+
+  <p class="tagline">
+    Pediatrician-Curated Product Guide
+  </p>
 
   <p class="doctor">
     Dr Fardeen Qureshi • Pediatrician
   </p>
 
-  <p>@childhealthguide</p>
+  <p class="handle">
+    @childhealthguide
+  </p>
+
 </header>
+
 
 
 <div class="container">
 
-  <div class="intro">
-    <h2>Parent's Product Guide</h2>
-    <p>
-      A collection of carefully selected products for babies and children.
-      Choose products according to your child's age and individual needs.
-    </p>
-  </div>
+
+<!-- ==================================================
+     INTRO
+================================================== -->
+
+<div class="intro">
+
+  <h2>
+    Parent's Product Guide
+  </h2>
+
+  <p>
+    A curated collection of products for babies and children.
+    Product selection should always be individualized according
+    to the child's age, needs and clinical situation.
+  </p>
+
+</div>
 
 
-  <!-- =====================================
-       BABY BATH & SKIN ESSENTIALS
-       ===================================== -->
 
-  <section class="category">
+<!-- ==================================================
+     BABY BATH & SKIN
+================================================== -->
 
-    <h2>🛁 Baby Bath & Skin Essentials</h2>
+<section class="main-category">
 
-    <div class="products">
-
-      <div class="product">
-        <span class="number">1</span>
-
-        <h3>
-          Baby Tear-Free Shampoo
-        </h3>
-
-        <a class="button"
-           href="https://link.amazon/B07n0NV1G"
-           target="_blank"
-           rel="noopener noreferrer">
-          View Product
-        </a>
-      </div>
+  <h2 class="main-category-title">
+    🛁 Baby Bath & Skin Essentials
+  </h2>
 
 
-      <div class="product">
-        <span class="number">2</span>
+  <!-- =========================
+       BATH & MASSAGE
+  ========================= -->
 
-        <h3>
-          Moisturising Baby Bathing Bar
-        </h3>
+  <div class="subcategory">
 
-        <a class="button"
-           href="https://link.amazon/B08lJvvDb"
-           target="_blank"
-           rel="noopener noreferrer">
-          View Product
-        </a>
-      </div>
-
-
-      <div class="product">
-        <span class="number">3</span>
-
-        <h3>
-          Advansed Baby Massage Oil
-        </h3>
-
-        <a class="button"
-           href="https://link.amazon/B06wq01qB"
-           target="_blank"
-           rel="noopener noreferrer">
-          View Product
-        </a>
-      </div>
-
-
-      <div class="product">
-        <span class="number">4</span>
-
-        <h3>
-          Sebamed Baby Body Lotion
-        </h3>
-
-        <a class="button"
-           href="https://link.amazon/B026Q2vPM"
-           target="_blank"
-           rel="noopener noreferrer">
-          View Product
-        </a>
-      </div>
-
-
-      <div class="product">
-        <span class="number">5</span>
-
-        <h3>
-          Combo Pack: Baby Daily Moisturizing Wash & Shampoo (354ml)
-          + Daily Moisture Lotion (227g)
-          + Soothing Relief Moisture Cream (100g)
-        </h3>
-
-        <a class="button"
-           href="https://link.amazon/B0e8pUUuO"
-           target="_blank"
-           rel="noopener noreferrer">
-          View Product
-        </a>
-      </div>
-
-    </div>
-  </section>
-
-
-  <!-- =====================================
-       BRAIN DEVELOPMENT & LEARNING
-       ===================================== -->
-
-  <section class="category">
-
-    <h2>🧠 Brain Development & Learning</h2>
+    <h3 class="subcategory-title">
+      🧼 Bath & Massage
+    </h3>
 
     <div class="products">
 
@@ -298,268 +495,867 @@
       <!-- PRODUCT 1 -->
 
       <div class="product">
+
         <span class="number">1</span>
 
         <h3>
-          Geometric Angle Blocks for Kids |
-          26 Pcs Montessori Sorting & Stacking Educational Toy
+          Baby Tear-Free Shampoo
         </h3>
 
-        <a class="button"
-           href="https://link.amazon/B0hUfyMDl"
-           target="_blank"
-           rel="noopener noreferrer">
+        <a
+          class="button"
+          href="https://link.amazon/B07n0NV1G"
+          target="_blank"
+          rel="noopener noreferrer">
+
           View Product
+
         </a>
+
       </div>
 
 
       <!-- PRODUCT 2 -->
 
       <div class="product">
+
         <span class="number">2</span>
 
         <h3>
-          Educational Kids Laptop Learning Toy for 2–5 Years
-          Boys & Girls – Alphabet, Letters, Words, Games,
-          Mathematics, Music, Logic & Memory – Blue
+          Moisturising Baby Bathing Bar
         </h3>
 
-        <a class="button"
-           href="https://link.amazon/B00C6JBWs"
-           target="_blank"
-           rel="noopener noreferrer">
+        <a
+          class="button"
+          href="https://link.amazon/B08lJvvDb"
+          target="_blank"
+          rel="noopener noreferrer">
+
           View Product
+
         </a>
+
       </div>
 
 
       <!-- PRODUCT 3 -->
 
       <div class="product">
+
         <span class="number">3</span>
 
         <h3>
-          1001 Jumbo Brain Booster Activities for 5 to 8 Years Old Kids |
-          Enhance the Child Mind with Cognitive Excellence |
-          Interactive Activity Book
+          Advansed Baby Massage Oil
         </h3>
 
-        <a class="button"
-           href="https://link.amazon/B02VCotyL"
-           target="_blank"
-           rel="noopener noreferrer">
+        <a
+          class="button"
+          href="https://link.amazon/B06wq01qB"
+          target="_blank"
+          rel="noopener noreferrer">
+
           View Product
+
         </a>
+
       </div>
 
 
       <!-- PRODUCT 4 -->
 
       <div class="product">
+
         <span class="number">4</span>
 
         <h3>
-          1001 Ultimate Brain Booster Activity Book for 3 to 6 Years Old Kids |
-          Enhance the Child Mind with Cognitive Excellence |
-          Interactive Activity Book
+          Sebamed Baby Body Lotion
         </h3>
 
-        <a class="button"
-           href="https://link.amazon/B0abdulgS"
-           target="_blank"
-           rel="noopener noreferrer">
+        <a
+          class="button"
+          href="https://link.amazon/B026Q2vPM"
+          target="_blank"
+          rel="noopener noreferrer">
+
           View Product
+
         </a>
+
       </div>
 
 
       <!-- PRODUCT 5 -->
 
       <div class="product">
+
         <span class="number">5</span>
 
         <h3>
-          1001 Jumbo Brain Booster Activities for 5 to 8 Years Old Kids |
-          Enhance the Child Mind with Cognitive Excellence |
-          Interactive Activity Book
+          Combo Pack: Baby Daily Moisturizing
+          Wash & Shampoo (354ml) +
+          Daily Moisture Lotion (227g) +
+          Soothing Relief Moisture Cream (100g)
         </h3>
 
-        <a class="button"
-           href="https://link.amazon/B07gooeSD"
-           target="_blank"
-           rel="noopener noreferrer">
+        <a
+          class="button"
+          href="https://link.amazon/B0e8pUUuO"
+          target="_blank"
+          rel="noopener noreferrer">
+
           View Product
+
         </a>
+
       </div>
+
+
+    </div>
+
+  </div>
+
+
+
+  <!-- =========================
+       SUNSCREENS
+  ========================= -->
+
+  <div class="subcategory">
+
+    <h3 class="subcategory-title">
+      ☀️ Sunscreens
+    </h3>
+
+    <div class="products">
 
 
       <!-- PRODUCT 6 -->
 
       <div class="product">
+
         <span class="number">6</span>
 
         <h3>
-          Brain Booster Activity Bag for Kids & Children |
-          Set of 10 Books |
-          Dot to Dot, Look & Find, How Many, Mazes,
-          Difference, Reasoning, Sort, Word Search & Jumble
+          Fixderma Shadow Sunscreen SPF 50+ Gel
+          for Kids PA+++ |
+          Broad Spectrum UVA & UVB Protection |
+          Non-Greasy & Water Resistant |
+          For Kids 2+ Years | 75gm
         </h3>
 
-        <a class="button"
-           href="https://link.amazon/B0bV3eb6A"
-           target="_blank"
-           rel="noopener noreferrer">
+        <a
+          class="button"
+          href="https://link.amazon/B0gXqjqt9"
+          target="_blank"
+          rel="noopener noreferrer">
+
           View Product
+
         </a>
+
       </div>
 
 
       <!-- PRODUCT 7 -->
 
       <div class="product">
+
         <span class="number">7</span>
 
         <h3>
-          400+ Brain Boosting Activity Book for 6+ Years Old Kids |
-          Set of 4 Books |
-          Maths Games, Brain Teasers, Puzzles & Logical Reasoning
+          La Shield Kids Sunscreen Gel SPF 50 PA+++ |
+          100% Mineral Sunscreen |
+          For Kids Above 2 Years |
+          Vitamin E & Hyaluronic Acid |
+          Suitable for Sensitive Skin |
+          4 Hour Water Resistant |
+          Fragrance Free
         </h3>
 
-        <a class="button"
-           href="https://link.amazon/B04fEN9Kt"
-           target="_blank"
-           rel="noopener noreferrer">
+        <a
+          class="button"
+          href="https://link.amazon/B04VJt67u"
+          target="_blank"
+          rel="noopener noreferrer">
+
           View Product
+
         </a>
+
       </div>
 
 
       <!-- PRODUCT 8 -->
 
       <div class="product">
+
         <span class="number">8</span>
 
         <h3>
-          My First Library Boxset for Kids |
-          10 Board Books | Ages 0–3 Years |
-          Early Learning | ABC | Numbers | Shapes |
-          Colors & More
+          Tuco Kids SPF 50 Sunscreen for Kids |
+          2-in-1 Face Cream |
+          PA++++ | 50g |
+          Broad Spectrum UVA/UVB Protection |
+          For Children 2–15 Years
         </h3>
 
-        <a class="button"
-           href="https://link.amazon/B0a4upyiS"
-           target="_blank"
-           rel="noopener noreferrer">
+        <a
+          class="button"
+          href="https://link.amazon/B04PsQAEa"
+          target="_blank"
+          rel="noopener noreferrer">
+
           View Product
+
         </a>
+
       </div>
 
+
+      <!-- PRODUCT 9 -->
+
+      <div class="product">
+
+        <span class="number">9</span>
+
+        <h3>
+          Mustela Baby Sunscreen SPF 50 | 100ml |
+          Sunscreen for Kids & Newborns |
+          Broad Spectrum UV Protection |
+          Water Resistant |
+          Sensitive Skin
+        </h3>
+
+        <a
+          class="button"
+          href="https://link.amazon/B0f0yuZ3w"
+          target="_blank"
+          rel="noopener noreferrer">
+
+          View Product
+
+        </a>
+
+      </div>
+
+
     </div>
-  </section>
+
+  </div>
 
 
-  <!-- =====================================
-       FORMULA FEED
-       ===================================== -->
 
-  <section class="category">
+  <!-- =========================
+       MOISTURIZERS
+  ========================= -->
 
-    <h2>🍼 Recommended Formula Feed</h2>
+  <div class="subcategory">
+
+    <h3 class="subcategory-title">
+      🧴 Moisturizers
+    </h3>
 
     <div class="products">
 
+
+      <!-- PRODUCT 10 -->
+
       <div class="product">
-        <span class="number">1</span>
 
-        <h3>Recommended Formula 1</h3>
+        <span class="number">10</span>
 
-        <a class="button"
-           href="https://link.amazon/B0a2ZvTOY"
-           target="_blank"
-           rel="noopener noreferrer">
+        <h3>
+          Cetaphil Baby Daily Lotion |
+          Shea Butter & Vitamin E |
+          Dermatologist Tested & Pediatrician Recommended |
+          400 ml
+        </h3>
+
+        <a
+          class="button"
+          href="https://link.amazon/B0j89iIlh"
+          target="_blank"
+          rel="noopener noreferrer">
+
           View Product
+
         </a>
+
       </div>
 
 
+      <!-- PRODUCT 11 -->
+
       <div class="product">
-        <span class="number">2</span>
 
-        <h3>Recommended Formula 2</h3>
+        <span class="number">11</span>
 
-        <a class="button"
-           href="https://link.amazon/B00fvtKgL"
-           target="_blank"
-           rel="noopener noreferrer">
+        <h3>
+          Cetaphil Baby Soothing Moisturising Cream |
+          100g |
+          For Newborns & Babies |
+          48H Hydration & 8H Skin Barrier Protection
+        </h3>
+
+        <a
+          class="button"
+          href="https://link.amazon/B03OyM3WD"
+          target="_blank"
+          rel="noopener noreferrer">
+
           View Product
+
         </a>
+
       </div>
 
 
-      <div class="product">
-        <span class="number">3</span>
-
-        <h3>Recommended Formula 3</h3>
-
-        <a class="button"
-           href="https://link.amazon/B07Lxijj6"
-           target="_blank"
-           rel="noopener noreferrer">
-          View Product
-        </a>
-      </div>
-
+      <!-- PRODUCT 12 -->
 
       <div class="product">
-        <span class="number">4</span>
 
-        <h3>Recommended Formula 4</h3>
+        <span class="number">12</span>
 
-        <a class="button"
-           href="https://link.amazon/B0cgwHxWN"
-           target="_blank"
-           rel="noopener noreferrer">
+        <h3>
+          Cetaphil Baby Daily Lotion |
+          Shea Butter & Vitamin E |
+          Dermatologist Tested & Pediatrician Recommended |
+          50 ml
+        </h3>
+
+        <a
+          class="button"
+          href="https://link.amazon/B05DB9HKA"
+          target="_blank"
+          rel="noopener noreferrer">
+
           View Product
+
         </a>
+
       </div>
+
 
     </div>
-  </section>
-
-
-  <!-- AFFILIATE DISCLOSURE -->
-
-  <div class="disclaimer">
-
-    <strong>Affiliate Disclosure:</strong><br>
-
-    Some links on this page may be affiliate links.
-    If you purchase through these links, we may earn a commission
-    at no additional cost to you.
 
   </div>
+
+
+
+  <!-- =========================
+       DIAPER RASH
+  ========================= -->
+
+  <div class="subcategory">
+
+    <h3 class="subcategory-title">
+      🩹 Diaper Rash Creams
+    </h3>
+
+    <div class="products">
+
+
+      <!-- PRODUCT 13 -->
+
+      <div class="product">
+
+        <span class="number">13</span>
+
+        <h3>
+          Cetaphil Baby Diaper Rash Cream
+          with Organic Calendula |
+          70g |
+          Zinc Oxide Barrier |
+          Chamomile & Shea Butter |
+          For Sensitive Baby Skin
+        </h3>
+
+        <a
+          class="button"
+          href="https://link.amazon/B04tK4yM4"
+          target="_blank"
+          rel="noopener noreferrer">
+
+          View Product
+
+        </a>
+
+      </div>
+
+
+      <!-- PRODUCT 14 -->
+
+      <div class="product">
+
+        <span class="number">14</span>
+
+        <h3>
+          B4 Nappi Cream 75g |
+          Diaper Rash Prevention Cream
+        </h3>
+
+        <a
+          class="button"
+          href="https://link.amazon/B0adP8IqW"
+          target="_blank"
+          rel="noopener noreferrer">
+
+          View Product
+
+        </a>
+
+      </div>
+
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- ==================================================
+     BRAIN DEVELOPMENT
+================================================== -->
+
+<section class="main-category">
+
+  <h2 class="main-category-title">
+    🧠 Brain Development & Learning
+  </h2>
+
+
+  <div class="products">
+
+
+    <!-- PRODUCT 1 -->
+
+    <div class="product">
+
+      <span class="number">1</span>
+
+      <h3>
+        Geometric Angle Blocks for Kids |
+        26 Pcs Montessori Sorting & Stacking
+        Educational Toy
+      </h3>
+
+      <a
+        class="button"
+        href="https://link.amazon/B0hUfyMDl"
+        target="_blank"
+        rel="noopener noreferrer">
+
+        View Product
+
+      </a>
+
+    </div>
+
+
+    <!-- PRODUCT 2 -->
+
+    <div class="product">
+
+      <span class="number">2</span>
+
+      <h3>
+        Educational Kids Laptop Learning Toy
+        for 2–5 Years |
+        Alphabet, Letters, Words, Games,
+        Mathematics, Music, Logic & Memory |
+        Blue
+      </h3>
+
+      <a
+        class="button"
+        href="https://link.amazon/B00C6JBWs"
+        target="_blank"
+        rel="noopener noreferrer">
+
+        View Product
+
+      </a>
+
+    </div>
+
+
+    <!-- PRODUCT 3 -->
+
+    <div class="product">
+
+      <span class="number">3</span>
+
+      <h3>
+        1001 Jumbo Brain Booster Activities
+        for 5 to 8 Years Old Kids |
+        Interactive Cognitive Activity Book
+      </h3>
+
+      <a
+        class="button"
+        href="https://link.amazon/B02VCotyL"
+        target="_blank"
+        rel="noopener noreferrer">
+
+        View Product
+
+      </a>
+
+    </div>
+
+
+    <!-- PRODUCT 4 -->
+
+    <div class="product">
+
+      <span class="number">4</span>
+
+      <h3>
+        1001 Ultimate Brain Booster Activity Book
+        for 3 to 6 Years Old Kids |
+        Interactive Cognitive Activity Book
+      </h3>
+
+      <a
+        class="button"
+        href="https://link.amazon/B0abdulgS"
+        target="_blank"
+        rel="noopener noreferrer">
+
+        View Product
+
+      </a>
+
+    </div>
+
+
+    <!-- PRODUCT 5 -->
+
+    <div class="product">
+
+      <span class="number">5</span>
+
+      <h3>
+        1001 Jumbo Brain Booster Activities
+        for 5 to 8 Years Old Kids |
+        Interactive Cognitive Activity Book
+      </h3>
+
+      <a
+        class="button"
+        href="https://link.amazon/B07gooeSD"
+        target="_blank"
+        rel="noopener noreferrer">
+
+        View Product
+
+      </a>
+
+    </div>
+
+
+    <!-- PRODUCT 6 -->
+
+    <div class="product">
+
+      <span class="number">6</span>
+
+      <h3>
+        Brain Booster Activity Bag for Kids & Children |
+        Set of 10 Books |
+        Dot to Dot, Look & Find, How Many,
+        Mazes, Difference, Reasoning, Sort,
+        Word Search & Jumble
+      </h3>
+
+      <a
+        class="button"
+        href="https://link.amazon/B0bV3eb6A"
+        target="_blank"
+        rel="noopener noreferrer">
+
+        View Product
+
+      </a>
+
+    </div>
+
+
+    <!-- PRODUCT 7 -->
+
+    <div class="product">
+
+      <span class="number">7</span>
+
+      <h3>
+        400+ Brain Boosting Activity Book
+        for 6+ Years Old Kids |
+        Set of 4 Books |
+        Maths Games, Brain Teasers,
+        Puzzles & Logical Reasoning
+      </h3>
+
+      <a
+        class="button"
+        href="https://link.amazon/B04fEN9Kt"
+        target="_blank"
+        rel="noopener noreferrer">
+
+        View Product
+
+      </a>
+
+    </div>
+
+
+    <!-- PRODUCT 8 -->
+
+    <div class="product">
+
+      <span class="number">8</span>
+
+      <h3>
+        My First Library Boxset for Kids |
+        10 Board Books |
+        Ages 0–3 Years |
+        ABC, Numbers, Shapes, Colors & More
+      </h3>
+
+      <a
+        class="button"
+        href="https://link.amazon/B0a4upyiS"
+        target="_blank"
+        rel="noopener noreferrer">
+
+        View Product
+
+      </a>
+
+    </div>
+
+
+  </div>
+
+</section>
+
+
+
+<!-- ==================================================
+     FORMULA FEED
+================================================== -->
+
+<section class="main-category">
+
+  <h2 class="main-category-title">
+    🍼 Infant & Follow-Up Formula
+  </h2>
+
+
+  <div class="formula-note">
+
+    <strong>Important:</strong>
+
+    Breastfeeding is recommended whenever possible.
+    Infant formula may be used when breast milk is unavailable,
+    insufficient, or when medically indicated.
+
+    Choose the appropriate formula stage according to the
+    child's age and your pediatrician's advice.
+
+  </div>
+
+
+  <div class="products">
+
+
+    <!-- STAGE 1 -->
+
+    <div class="product">
+
+      <span class="number">1</span>
+
+      <h3>
+
+        NAN PRO Stage 1 |
+        Infant Formula 0–6 Months |
+        Probiotic & Whey Protein | 400g
+
+        <br><br>
+
+        Baby formula with Probiotic L. reuteri,
+        easy-to-digest whey protein and DHA-ARA.
+
+      </h3>
+
+      <a
+        class="button"
+        href="https://link.amazon/B0a2ZvTOY"
+        target="_blank"
+        rel="noopener noreferrer">
+
+        View Product
+
+      </a>
+
+    </div>
+
+
+    <!-- STAGE 2 -->
+
+    <div class="product">
+
+      <span class="number">2</span>
+
+      <h3>
+
+        NAN PRO Stage 2 |
+        Follow-Up Formula |
+        6–12 Months | DHA-ARA | 400g
+
+        <br><br>
+
+        Follow-up formula with DHA to support
+        normal brain development, with Vitamins
+        A, C & Zinc for normal immune function.
+
+      </h3>
+
+      <a
+        class="button"
+        href="https://link.amazon/B00fvtKgL"
+        target="_blank"
+        rel="noopener noreferrer">
+
+        View Product
+
+      </a>
+
+    </div>
+
+
+    <!-- STAGE 3 -->
+
+    <div class="product">
+
+      <span class="number">3</span>
+
+      <h3>
+
+        NAN PRO Stage 3 |
+        Follow-Up Formula |
+        12–18 Months | DHA-ARA | 400g
+
+        <br><br>
+
+        Follow-up formula with DHA to support
+        normal brain development, with Vitamins
+        A, C & Zinc for normal immune function.
+
+      </h3>
+
+      <a
+        class="button"
+        href="https://link.amazon/B07Lxijj6"
+        target="_blank"
+        rel="noopener noreferrer">
+
+        View Product
+
+      </a>
+
+    </div>
+
+
+    <!-- STAGE 4 -->
+
+    <div class="product">
+
+      <span class="number">4</span>
+
+      <h3>
+
+        NAN PRO Stage 4 |
+        Follow-Up Formula |
+        18–24 Months | DHA-ARA | 400g
+
+        <br><br>
+
+        Follow-up formula with DHA to support
+        normal brain development, with Vitamins
+        A, C & Zinc for normal immune function.
+
+      </h3>
+
+      <a
+        class="button"
+        href="https://link.amazon/B0cgwHxWN"
+        target="_blank"
+        rel="noopener noreferrer">
+
+        View Product
+
+      </a>
+
+    </div>
+
+
+  </div>
+
+</section>
+
+
+
+<!-- ==================================================
+     AFFILIATE DISCLOSURE
+================================================== -->
+
+<div class="disclaimer">
+
+  <strong>Affiliate Disclosure:</strong>
+
+  Some links on this page may be affiliate links.
+  If you purchase through these links, we may earn a commission
+  at no additional cost to you.
 
 </div>
 
 
+</div>
+
+
+
+<!-- ==================================================
+     FOOTER
+================================================== -->
+
 <footer>
 
-  <p>© 2026 ChildHealthGuide</p>
+  <p>
+    © 2026 ChildHealthGuide
+  </p>
 
   <p>
     Dr Fardeen Qureshi • Pediatrician
   </p>
 
   <p>
-    <a href="https://www.instagram.com/childhealthguide/"
-       target="_blank"
-       rel="noopener noreferrer">
+
+    <a
+      href="https://www.instagram.com/childhealthguide/"
+      target="_blank"
+      rel="noopener noreferrer">
+
       Instagram: @childhealthguide
+
     </a>
+
   </p>
 
 </footer>
 
+
 </body>
-</html>
+
+  </html>
